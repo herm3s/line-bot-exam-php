@@ -67,4 +67,4 @@ function hex2rgb($hex) {
 }
 
 
-?>
+
