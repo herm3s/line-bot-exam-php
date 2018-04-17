@@ -176,12 +176,12 @@ if(!is_null($events)){
                  
                     //add
                     $content1 = file_get_contents($fileNameSave);
-                    $replyData = new MultiMessageBuilder();
-                    $replyData->add( new TextMessageBuilder($textReplyMessage))
-                              ->add( new TextMessageBuilder($content1));
+                    //$replyData = new MultiMessageBuilder();
+                    //$replyData->add( new TextMessageBuilder($textReplyMessage))
+                    //          ->add( new TextMessageBuilder($content1));
  
                    
-                 
+                     $replyData = new TextMessageBuilder($content1);
                  
                  
                     break;
