@@ -21,8 +21,8 @@ switch ($n = count($setting)) {
 
 $background = explode(",",hex2rgb($img['background']));
 $color = explode(",",hex2rgb($img['color']));
-$width = empty($img['width']) ? 240 : $img['width'];
-$height = empty($img['height']) ? 240 : $img['height'];
+$width = empty($img['width']) ? 100 : $img['width'];
+$height = empty($img['height']) ? 100 : $img['height'];
 $string = (string) isset($_GET['t']) ? $_GET['t'] : $width ."x". $height;
 
 header("Content-Type: image/png");
@@ -65,6 +65,3 @@ function hex2rgb($hex) {
    $rgb = array($r, $g, $b);
    return implode(",", $rgb); 
 }
-
-
-
