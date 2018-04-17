@@ -10,7 +10,7 @@ $access_token = 'FZldEem8ostD63IqQ5NQ0mZnYHK/NSzQutlkVIFLa9rRzFYQ3SXMvnzr6gM/rrB
 
 $bot = new LINEBotTiny();
 
-$stat = $bot->profil('U669d211bf92aca29db6e6fc4dafab857')
+$stat = $bot->profil('U669d211bf92aca29db6e6fc4dafab857');
 
 echo $stat;
   
