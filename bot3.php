@@ -172,7 +172,7 @@ if(!is_null($events)){
                     file_put_contents($fileFullSavePath,$dataBinary); // ทำการบันทึกไฟล์
                     //$textReplyMessage = "บันทึกไฟล์เรียบร้อยแล้ว $fileNameSave";
                     $textReplyMessage = "บันทึกไฟล์เรียบร้อยแล้ว $fileFullSavePath";
-                    //$replyData = new TextMessageBuilder($textReplyMessage);
+                    $replyData = new TextMessageBuilder($textReplyMessage);
                  
                     //add
                     $content1 = file_get_contents($fileNameSave);
@@ -180,10 +180,7 @@ if(!is_null($events)){
                     //$replyData->add( new TextMessageBuilder($textReplyMessage))
                     //          ->add( new TextMessageBuilder($content1));
  
-                   
-                     $replyData = new TextMessageBuilder($content1);
-                 
-                 
+
                     break;
                 }
                 $failMessage = json_encode($idMessage.' '.$response->getHTTPStatus() . ' ' . $response->getRawBody());
