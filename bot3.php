@@ -173,6 +173,11 @@ if(!is_null($events)){
                     //$textReplyMessage = "บันทึกไฟล์เรียบร้อยแล้ว $fileNameSave";
                     $textReplyMessage = "บันทึกไฟล์เรียบร้อยแล้ว $fileFullSavePath";
                     $replyData = new TextMessageBuilder($textReplyMessage);
+                 
+                    $content1 = file_get_contents($fileNameSave);
+                    $replyData = new TextMessageBuilder($content1);
+                 
+                 
                     break;
                 }
                 $failMessage = json_encode($idMessage.' '.$response->getHTTPStatus() . ' ' . $response->getRawBody());
