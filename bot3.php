@@ -180,7 +180,7 @@ if(!is_null($events)){
                     $replyData->add( new TextMessageBuilder($textReplyMessage))
                               ->add( new TextMessageBuilder($content1));
  
-                   $
+                   
                  
                  
                  
