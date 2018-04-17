@@ -35,8 +35,8 @@ class SendVideoTest extends \PHPUnit_Framework_TestCase
             $testRunner->assertEquals('REPLY-TOKEN', $data['replyToken']);
             $testRunner->assertEquals(1, count($data['messages']));
             $testRunner->assertEquals(MessageType::VIDEO, $data['messages'][0]['type']);
-            $testRunner->assertEquals('https://example.com/video.mp4', $data['messages'][0]['originalContentUrl']);
-            $testRunner->assertEquals('https://example.com/video_preview.jpg', $data['messages'][0]['previewImageUrl']);
+            $testRunner->assertEquals('https://www.quirksmode.org/html5/videos/big_buck_bunny.mp4', $data['messages'][0]['originalContentUrl']);
+            $testRunner->assertEquals('https://thumb.ibb.co/isTQZ7/prev.jpg', $data['messages'][0]['previewImageUrl']);
 
             return ['status' => 200];
         };
@@ -61,15 +61,15 @@ class SendVideoTest extends \PHPUnit_Framework_TestCase
             $testRunner->assertEquals('DESTINATION', $data['to']);
             $testRunner->assertEquals(1, count($data['messages']));
             $testRunner->assertEquals(MessageType::VIDEO, $data['messages'][0]['type']);
-            $testRunner->assertEquals('https://example.com/video.mp4', $data['messages'][0]['originalContentUrl']);
-            $testRunner->assertEquals('https://example.com/video_preview.jpg', $data['messages'][0]['previewImageUrl']);
+            $testRunner->assertEquals('https://www.quirksmode.org/html5/videos/big_buck_bunny.mp4', $data['messages'][0]['originalContentUrl']);
+            $testRunner->assertEquals('https://thumb.ibb.co/isTQZ7/prev.jpg', $data['messages'][0]['previewImageUrl']);
 
             return ['status' => 200];
         };
         $bot = new LINEBot(new DummyHttpClient($this, $mock), ['channelSecret' => 'CHANNEL-SECRET']);
         $res = $bot->pushMessage(
             'DESTINATION',
-            new VideoMessageBuilder('https://example.com/video.mp4', 'https://example.com/video_preview.jpg')
+            new VideoMessageBuilder('https://www.quirksmode.org/html5/videos/big_buck_bunny.mp4', 'https://thumb.ibb.co/isTQZ7/prev.jpg')
         );
 
         $this->assertEquals(200, $res->getHTTPStatus());
