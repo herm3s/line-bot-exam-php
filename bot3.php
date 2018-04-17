@@ -178,7 +178,7 @@ if(!is_null($events)){
                     $content1 = file_get_contents($fileNameSave);
                     $replyData = new MultiMessageBuilder();
                     $replyData->add( new TextMessageBuilder($textReplyMessage))
-                              ->add($content1);
+                              ->add( new TextMessageBuilder($content1));
  
                    $
                  
