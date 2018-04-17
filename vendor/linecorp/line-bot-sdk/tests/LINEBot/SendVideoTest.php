@@ -40,7 +40,7 @@ class SendVideoTest extends \PHPUnit_Framework_TestCase
 
             return ['status' => 200];
         };
-        $bot = new LINEBot(new DummyHttpClient($this, $mock), ['channelSecret' => 'CHANNEL-SECRET']);
+        $bot = new LINEBot(new DummyHttpClient($this, $mock), ['channelSecret' => 'e5d464aa428fdb58ede0e1a877108551']);
         $res = $bot->replyMessage(
             'REPLY-TOKEN',
             new VideoMessageBuilder('https://example.com/video.mp4', 'https://example.com/video_preview.jpg')
@@ -66,7 +66,7 @@ class SendVideoTest extends \PHPUnit_Framework_TestCase
 
             return ['status' => 200];
         };
-        $bot = new LINEBot(new DummyHttpClient($this, $mock), ['channelSecret' => 'CHANNEL-SECRET']);
+        $bot = new LINEBot(new DummyHttpClient($this, $mock), ['channelSecret' => 'e5d464aa428fdb58ede0e1a877108551']);
         $res = $bot->pushMessage(
             'DESTINATION',
             new VideoMessageBuilder('https://www.quirksmode.org/html5/videos/big_buck_bunny.mp4', 'https://thumb.ibb.co/isTQZ7/prev.jpg')
