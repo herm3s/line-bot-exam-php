@@ -1,14 +1,11 @@
 
 <?php
 
-include_once '\vendor\linecorp\line-bot-sdk\tests\LINEBot\SendVideoTest.php';
+include_once 'line-bot-exam-php/vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php';
 
-use LINE\Tests\LINEBot;
+use LINEBotTiny;
 
-$send1 = new SendVideoTest();
-&stat = $send1->testPushVideo();
-
-echo &stat;
+profil($userId)
 
   
   
