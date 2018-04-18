@@ -196,18 +196,13 @@ if(!is_null($events)){
         }
     }
 }
-//$response = $bot->replyMessage($replyToken,$replyData);
-//if ($response->isSucceeded()) {
-//    echo 'Succeeded!';
-//    return;
-//}
-
-
-$response = $bot->replyMessage($replyToken,new TextMessageBuilder($events));
+$response = $bot->replyMessage($replyToken,$replyData);
 if ($response->isSucceeded()) {
     echo 'Succeeded!';
     return;
 }
+
+
 
  
 // Failed
