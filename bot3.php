@@ -175,9 +175,9 @@ if(!is_null($events)){
                     file_put_contents($fileFullSavePath,$dataBinary); // ทำการบันทึกไฟล์
                     //$textReplyMessage = "บันทึกไฟล์เรียบร้อยแล้ว $fileNameSave";
                     $textReplyMessage = "บันทึกไฟล์เรียบร้อยแล้ว $fileFullSavePath";
-                    //$replyData = new TextMessageBuilder($textReplyMessage);
+                    $replyData = new TextMessageBuilder($textReplyMessage);
                  
-                    $replyData = new TextMessageBuilder($content);
+                    //$replyData = new TextMessageBuilder($content);
                     
                  
                     //add
