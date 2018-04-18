@@ -57,6 +57,9 @@ $content = file_get_contents('php://input');
  
 // แปลงข้อความรูปแบบ JSON  ให้อยู่ในโครงสร้างตัวแปร array
 $events = json_decode($content, true);
+
+
+
 if(!is_null($events)){
     // ถ้ามีค่า สร้างตัวแปรเก็บ replyToken ไว้ใช้งาน
     $replyToken = $events['events'][0]['replyToken'];
@@ -198,6 +201,10 @@ if ($response->isSucceeded()) {
     echo 'Succeeded!';
     return;
 }
+
+echo $events;
+$bot->replyMessage($replyToken,new TextMessageBuilder($events););
+
  
 // Failed
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
