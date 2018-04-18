@@ -63,6 +63,7 @@ if(!is_null($events)){
     $sourceType = $events['events'][0]['source']['type'];
     $is_postback = NULL;
     $is_message = NULL;
+ echo $replyToken.$userID.$sourceType .$events;
     $replyData = new TextMessageBuilder($events);
 }
 
