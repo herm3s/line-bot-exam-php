@@ -1,12 +1,13 @@
 <?php
 
+
+
+require "vendor/autoload.php";
+
 <head>
 <meta charset="UFT-8">
 <title>ทดสอบแปลงข้อความ ด้วย ob_iconv_handler</title>
 </head>
-
-require "vendor/autoload.php";
-
 
 
 
