@@ -4,6 +4,13 @@
 
 require "vendor/autoload.php";
 
+
+<head>
+<meta charset="UFT-8">
+<title>ทดสอบแปลงข้อความ ด้วย ob_iconv_handler</title>
+</head>
+
+
 $access_token = 'FZldEem8ostD63IqQ5NQ0mZnYHK/NSzQutlkVIFLa9rRzFYQ3SXMvnzr6gM/rrBPK4wdLlSgA8Ba7vOJMajRtzAYouW9l8rQ3xlQeiDlBS48fUbw41nCul84q4NKVpQ53r/5mF4CUx1CNQfS3+iBbwdB04t89/1O/w1cDnyilFU=';
 
 $channelSecret = 'e5d464aa428fdb58ede0e1a877108551';
