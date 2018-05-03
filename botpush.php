@@ -14,7 +14,7 @@ $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
 
-฿text_send = $_POST['name'];
+฿text_send = $_POST["txtName"];
 
 $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder(฿text_send);
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
